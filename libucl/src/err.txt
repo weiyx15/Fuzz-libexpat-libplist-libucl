@@ -1,0 +1,23 @@
+ucl_hash.c:230:1: error: There is an unknown macro here somewhere. Configuration is required. If KHASH_INIT is a macro then please configure it. [unknownMacro]
+KHASH_INIT (ucl_hash_caseless_node, const ucl_object_t *, struct ucl_hash_elt, 1,
+^
+ucl_util.c:3002:39: warning: Possible null pointer dereference: vec [nullPointer]
+     kv_resize_safe (ucl_object_t *, *vec, 8, enomem);
+                                      ^
+ucl_util.c:2999:6: note: Assignment 'vec=(ucl_array_t*)((new)!=NULL?(new)->value.av:NULL)', assigned value is 0
+     UCL_ARRAY_GET (vec, new);
+     ^
+ucl_util.c:3002:39: note: Null pointer dereference
+     kv_resize_safe (ucl_object_t *, *vec, 8, enomem);
+                                      ^
+ucl_util.c:3020:7: warning: Possible null pointer dereference: vec [nullPointer]
+  if (vec->m < reserved) {
+      ^
+ucl_util.c:3018:3: note: Assignment 'vec=(ucl_array_t*)((obj)!=NULL?(obj)->value.av:NULL)', assigned value is 0
+  UCL_ARRAY_GET (vec, obj);
+  ^
+ucl_util.c:3020:7: note: Null pointer dereference
+  if (vec->m < reserved) {
+      ^
+nofile:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 configurations. Use --force to check all configurations. For more details, use --enable=information. [toomanyconfigs]
+

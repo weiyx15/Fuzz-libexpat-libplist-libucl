@@ -1,0 +1,245 @@
+src/Dictionary.cpp:55:68: performance: Prefer prefix ++/-- operators for non-primitive types. [postfixOperator]
+    for (Dictionary::iterator it = _map.begin(); it != _map.end(); it++)
+                                                                   ^
+src/Dictionary.cpp:67:68: performance: Prefer prefix ++/-- operators for non-primitive types. [postfixOperator]
+    for (Dictionary::iterator it = _map.begin(); it != _map.end(); it++)
+                                                                   ^
+src/Dictionary.cpp:80:68: performance: Prefer prefix ++/-- operators for non-primitive types. [postfixOperator]
+    for (Dictionary::iterator it = _map.begin(); it != _map.end(); it++)
+                                                                   ^
+src/base64.c:82:6: style: The scope of the variable 'wv' can be reduced. [variableScope]
+ int wv, w1, w2, w3, w4;
+     ^
+src/base64.c:48:31: style: Checking if unsigned expression 'size' is less than zero. [unsignedLessThanZero]
+ if (!outbuf || !buf || (size <= 0)) {
+                              ^
+src/base64.c:78:10: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+ if (len <= 0) return NULL;
+         ^
+src/bplist.c:840:43: warning: Invalid test for overflow 'offset_table+offset_table_size<offset_table'. Condition is always false unless there is overflow, and overflow is undefined behaviour. [invalidTestForOverflow]
+    if ((offset_table + offset_table_size < offset_table) || (offset_table + offset_table_size > end_data)) {
+                                          ^
+src/bplist.c:272:26: portability: Casting between unsigned char * and float * which have an incompatible binary data representation. [invalidPointerCast]
+        data->realval = *(float *) buf;
+                         ^
+src/bplist.c:276:26: portability: Casting between unsigned char * and double * which have an incompatible binary data representation. [invalidPointerCast]
+        data->realval = *(double *) buf;
+                         ^
+src/bplist.c:982:32: portability: Casting from float * to unsigned int * is not portable due to different binary data representations on different platforms. [invalidPointerCast]
+        *(uint32_t*)(buff+8) = float_bswap32(*(uint32_t*)&floatval);
+                               ^
+src/bplist.c:984:32: portability: Casting from double * to unsigned long * is not portable due to different binary data representations on different platforms. [invalidPointerCast]
+        *(uint64_t*)(buff+8) = float_bswap64(*(uint64_t*)&val);
+                               ^
+src/bplist.c:993:28: portability: Casting from double * to unsigned long * is not portable due to different binary data representations on different platforms. [invalidPointerCast]
+    *(uint64_t*)(buff+8) = float_bswap64(*(uint64_t*)&val);
+                           ^
+src/bplist.c:324:11: style: The scope of the variable 'wc' can be reduced. [variableScope]
+ uint16_t wc;
+          ^
+src/bplist.c:424:14: style: The scope of the variable 'str_i' can be reduced. [variableScope]
+    uint64_t str_i = 0, str_j = 0;
+             ^
+src/bplist.c:424:25: style: The scope of the variable 'str_j' can be reduced. [variableScope]
+    uint64_t str_i = 0, str_j = 0;
+                        ^
+src/bplist.c:425:14: style: The scope of the variable 'index1' can be reduced. [variableScope]
+    uint64_t index1, index2;
+             ^
+src/bplist.c:425:22: style: The scope of the variable 'index2' can be reduced. [variableScope]
+    uint64_t index1, index2;
+                     ^
+src/bplist.c:503:14: style: The scope of the variable 'str_j' can be reduced. [variableScope]
+    uint64_t str_j = 0;
+             ^
+src/bplist.c:504:14: style: The scope of the variable 'index1' can be reduced. [variableScope]
+    uint64_t index1;
+             ^
+src/bplist.c:718:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i = 0;
+        ^
+src/bplist.c:1024:16: style: The scope of the variable 'c0' can be reduced. [variableScope]
+ unsigned char c0;
+               ^
+src/bplist.c:1025:16: style: The scope of the variable 'c1' can be reduced. [variableScope]
+ unsigned char c1;
+               ^
+src/bplist.c:1026:16: style: The scope of the variable 'c2' can be reduced. [variableScope]
+ unsigned char c2;
+               ^
+src/bplist.c:1027:16: style: The scope of the variable 'c3' can be reduced. [variableScope]
+ unsigned char c3;
+               ^
+src/bplist.c:424:20: style: Variable 'str_i' is assigned a value that is never used. [unreadVariable]
+    uint64_t str_i = 0, str_j = 0;
+                   ^
+src/bplist.c:424:31: style: Variable 'str_j' is assigned a value that is never used. [unreadVariable]
+    uint64_t str_i = 0, str_j = 0;
+                              ^
+src/bplist.c:503:20: style: Variable 'str_j' is assigned a value that is never used. [unreadVariable]
+    uint64_t str_j = 0;
+                   ^
+src/bplist.c:718:11: style: Variable 'i' is assigned a value that is never used. [unreadVariable]
+    int i = 0;
+          ^
+src/bplist.c:1062:4: warning: %lu in format string (no. 2) requires 'unsigned long' but the argument type is 'signed long'. [invalidPrintfArgType_uint]
+   PLIST_BIN_ERR("%s: invalid utf8 sequence in string at index %lu\n", __func__, i);
+   ^
+src/bplist.c:959:9: warning: Redundant assignment of 'val' to itself. [selfAssignment]
+    val = be64toh(val);
+        ^
+src/bplist.c:969:9: warning: Redundant assignment of 'val' to itself. [selfAssignment]
+    val = be64toh(val);
+        ^
+src/bplist.c:1102:13: warning: Redundant assignment of 'idx' to itself. [selfAssignment]
+        idx = be64toh(idx);
+            ^
+src/bplist.c:1121:14: warning: Redundant assignment of 'idx1' to itself. [selfAssignment]
+        idx1 = be64toh(idx1);
+             ^
+src/bplist.c:1127:14: warning: Redundant assignment of 'idx2' to itself. [selfAssignment]
+        idx2 = be64toh(idx2);
+             ^
+src/bplist.c:1142:9: warning: Redundant assignment of 'val' to itself. [selfAssignment]
+    val = be64toh(val);
+        ^
+src/bytearray.c:53:31: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+ if (!ba || !ba->data || (len <= 0)) return;
+                              ^
+src/plist.c:587:10: warning: Size of pointer 'iter' used instead of size of its data. [pointerSize]
+        *iter = malloc(sizeof(node_t*));
+         ^
+src/plist.c:627:10: warning: Size of pointer 'iter' used instead of size of its data. [pointerSize]
+        *iter = malloc(sizeof(node_t*));
+         ^
+src/plist.c:809:21: style: Variable 'type' is assigned a value that is never used. [unreadVariable]
+    plist_type type = PLIST_NONE;
+                    ^
+src/time64.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 16 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/time64.c:234:22: style: Variable 'cycles' is assigned a value that is never used. [unreadVariable]
+    int      cycles  = 0;
+                     ^
+src/time64.c:664:0: information: Skipping configuration 'EOVERFLOW' since the value of 'EOVERFLOW' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        errno = EOVERFLOW;
+^
+src/time64.c:737:0: information: Skipping configuration 'EOVERFLOW' since the value of 'EOVERFLOW' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        errno = EOVERFLOW;
+^
+src/xplist.c:290:20: style: The scope of the variable 'count' can be reduced. [variableScope]
+            size_t count = 0;
+                   ^
+src/xplist.c:219:29: style: Checking if unsigned expression 'val_len' is less than zero. [unsignedLessThanZero]
+                if (val_len <= 0) {
+                            ^
+src/xplist.c:290:26: style: Variable 'count' is assigned a value that is never used. [unreadVariable]
+            size_t count = 0;
+                         ^
+src/xplist.c:598:11: style: Variable 'i' is assigned a value that is never used. [unreadVariable]
+    int i = 0;
+          ^
+src/xplist.c:730:23: style: Variable 'p' is assigned a value that is never used. [unreadVariable]
+                    p = ctx->pos;
+                      ^
+src/xplist.c:737:19: style: Variable 'p' is assigned a value that is never used. [unreadVariable]
+                p = ctx->pos;
+                  ^
+src/xplist.c:746:15: style: Variable 'p' is assigned a value that is never used. [unreadVariable]
+            p = ctx->pos;
+              ^
+src/xplist.c:774:18: style: Variable 'last' is assigned a value that is never used. [unreadVariable]
+            last = text_part_append(last, p, q-p, 0);
+                 ^
+src/xplist.c:776:18: style: Variable 'last' is assigned a value that is never used. [unreadVariable]
+            last = text_part_init(parts, p, q-p, 0);
+                 ^
+src/plist.c:87:0: style: The function 'DllMain' is never used. [unusedFunction]
+
+^
+src/time64.c:806:0: style: The function 'ctime64_r' is never used. [unusedFunction]
+
+^
+src/plist.c:830:0: style: The function 'plist_access_path' is never used. [unusedFunction]
+
+^
+src/plist.c:568:0: style: The function 'plist_array_item_remove' is never used. [unusedFunction]
+
+^
+src/plist.c:508:0: style: The function 'plist_array_set_item' is never used. [unusedFunction]
+
+^
+src/plist.c:1189:0: style: The function 'plist_boolean_is_true' is never used. [unusedFunction]
+
+^
+src/plist.c:1084:0: style: The function 'plist_compare_node_value' is never used. [unusedFunction]
+
+^
+src/plist.c:1333:0: style: The function 'plist_data_val_compare' is never used. [unusedFunction]
+
+^
+src/plist.c:1347:0: style: The function 'plist_data_val_compare_with_size' is never used. [unusedFunction]
+
+^
+src/plist.c:1359:0: style: The function 'plist_data_val_contains' is never used. [unusedFunction]
+
+^
+src/plist.c:1260:0: style: The function 'plist_date_val_compare' is never used. [unusedFunction]
+
+^
+src/plist.c:758:0: style: The function 'plist_dict_insert_item' is never used. [unusedFunction]
+
+^
+src/plist.c:671:0: style: The function 'plist_dict_item_get_key' is never used. [unusedFunction]
+
+^
+src/plist.c:782:0: style: The function 'plist_dict_merge' is never used. [unusedFunction]
+
+^
+src/plist.c:179:0: style: The function 'plist_from_memory' is never used. [unusedFunction]
+
+^
+src/plist.c:996:0: style: The function 'plist_get_data_ptr' is never used. [unusedFunction]
+
+^
+src/plist.c:925:0: style: The function 'plist_get_string_ptr' is never used. [unusedFunction]
+
+^
+src/plist.c:1306:0: style: The function 'plist_key_val_compare' is never used. [unusedFunction]
+
+^
+src/plist.c:1315:0: style: The function 'plist_key_val_compare_with_size' is never used. [unusedFunction]
+
+^
+src/plist.c:1324:0: style: The function 'plist_key_val_contains' is never used. [unusedFunction]
+
+^
+src/plist.c:1231:0: style: The function 'plist_real_val_compare' is never used. [unusedFunction]
+
+^
+src/plist.c:1279:0: style: The function 'plist_string_val_compare' is never used. [unusedFunction]
+
+^
+src/plist.c:1288:0: style: The function 'plist_string_val_compare_with_size' is never used. [unusedFunction]
+
+^
+src/plist.c:1297:0: style: The function 'plist_string_val_contains' is never used. [unusedFunction]
+
+^
+src/bplist.c:1380:0: style: The function 'plist_to_bin_free' is never used. [unusedFunction]
+
+^
+src/xplist.c:536:0: style: The function 'plist_to_xml_free' is never used. [unusedFunction]
+
+^
+src/plist.c:1215:0: style: The function 'plist_uid_val_compare' is never used. [unusedFunction]
+
+^
+src/plist.c:1199:0: style: The function 'plist_uint_val_compare' is never used. [unusedFunction]
+
+^
+src/time64.c:552:0: style: The function 'timelocal64' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+

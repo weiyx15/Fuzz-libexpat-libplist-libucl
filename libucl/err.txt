@@ -1,0 +1,485 @@
+src/ucl_emitter.c:520:14: style: The scope of the variable 'ud_out' can be reduced. [variableScope]
+ const char *ud_out;
+             ^
+src/ucl_emitter.c:594:12: style: Variable 'ud_out' is assigned a value that is never used. [unreadVariable]
+    ud_out = "null";
+           ^
+src/ucl_emitter_streamline.c:96:7: style: The scope of the variable 'print_key' can be reduced. [variableScope]
+ bool print_key = false;
+      ^
+src/ucl_emitter_utils.c:335:17: style: The scope of the variable 'buf' can be reduced. [variableScope]
+ unsigned char *buf;
+                ^
+src/ucl_hash.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/ucl_hash.c:230:1: error: There is an unknown macro here somewhere. Configuration is required. If KHASH_INIT is a macro then please configure it. [unknownMacro]
+KHASH_INIT (ucl_hash_caseless_node, const ucl_object_t *, struct ucl_hash_elt, 1,
+^
+src/ucl_hash.c:51:0: information: Skipping configuration 'UCL_RANDOM_FUNCTION' since the value of 'UCL_RANDOM_FUNCTION' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  seed = UCL_RANDOM_FUNCTION;
+^
+src/ucl_msgpack.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 14 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+src/ucl_msgpack.c:747:18: style: The scope of the variable 'shift' can be reduced. [variableScope]
+ unsigned int i, shift, mask;
+                 ^
+src/ucl_msgpack.c:747:25: style: The scope of the variable 'mask' can be reduced. [variableScope]
+ unsigned int i, shift, mask;
+                        ^
+src/ucl_msgpack.c:146:23: portability: Shifting a negative value is technically undefined behaviour [shiftNegativeLHS]
+  uval = ((val ^ (val >> 63)) - (val >> 63));
+                      ^
+src/ucl_msgpack.c:146:23: portability: Shifting signed 64-bit value by 63 bits is implementation-defined behaviour [shiftTooManyBitsSigned]
+  uval = ((val ^ (val >> 63)) - (val >> 63));
+                      ^
+src/ucl_msgpack.c:1262:7: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+  ret = obj_parser->func (parser, container, len, obj_parser->fmt,
+      ^
+src/ucl_parser.c:63:14: style: The scope of the variable 'fmt_string' can be reduced. [variableScope]
+ const char *fmt_string, *filename;
+             ^
+src/ucl_parser.c:372:14: style: The scope of the variable 'p' can be reduced. [variableScope]
+ const char *p, *end, *ret = ptr;
+             ^
+src/ucl_parser.c:372:18: style: The scope of the variable 'end' can be reduced. [variableScope]
+ const char *p, *end, *ret = ptr;
+                 ^
+src/ucl_parser.c:575:20: style: The scope of the variable 'tret' can be reduced. [variableScope]
+ ssize_t ret = -1, tret;
+                   ^
+src/ucl_parser.c:1020:16: style: The scope of the variable 'c' can be reduced. [variableScope]
+ unsigned char c;
+               ^
+src/ucl_parser.c:1102:16: style: The scope of the variable 'c' can be reduced. [variableScope]
+ unsigned char c;
+               ^
+src/ucl_parser.c:1172:7: style: The scope of the variable 'errmsg' can be reduced. [variableScope]
+ char errmsg[256];
+      ^
+src/ucl_parser.c:1293:44: style: The scope of the variable 't' can be reduced. [variableScope]
+ const unsigned char *p, *c = NULL, *end, *t;
+                                           ^
+src/ucl_parser.c:1636:16: style: The scope of the variable 't' can be reduced. [variableScope]
+ ucl_object_t *t, *obj = NULL;
+               ^
+src/ucl_schema.c:66:10: style: The scope of the variable 'va' can be reduced. [variableScope]
+ va_list va;
+         ^
+src/ucl_schema.c:116:22: style: The scope of the variable 'elt' can be reduced. [variableScope]
+ const ucl_object_t *elt, *cur, *cur_dep;
+                     ^
+src/ucl_schema.c:155:23: style: The scope of the variable 'pat' can be reduced. [variableScope]
+   *required = NULL, *pat, *pelt;
+                      ^
+src/ucl_schema.c:155:29: style: The scope of the variable 'pelt' can be reduced. [variableScope]
+   *required = NULL, *pat, *pelt;
+                            ^
+src/ucl_schema.c:222:24: style: The scope of the variable 'vobj' can be reduced. [variableScope]
+   const ucl_object_t *vobj;
+                       ^
+src/ucl_schema.c:605:22: style: The scope of the variable 'elt' can be reduced. [variableScope]
+ const ucl_object_t *elt;
+                     ^
+src/ucl_schema.c:742:21: style: The scope of the variable 'parser' can be reduced. [variableScope]
+ struct ucl_parser *parser;
+                    ^
+src/ucl_util.c:2502:3: portability: Returning an integer in a function with pointer return type is not portable. [CastIntegerToAddressAtReturn]
+  return false;
+  ^
+src/ucl_util.c:2996:5: warning: Either the condition '(new)!=NULL' is redundant or there is possible null pointer dereference: new. [nullPointerRedundantCheck]
+    new->value.av = UCL_ALLOC (sizeof (ucl_array_t));
+    ^
+src/ucl_util.c:2999:6: note: Assuming that condition '(new)!=NULL' is not redundant
+     UCL_ARRAY_GET (vec, new);
+     ^
+src/ucl_util.c:2996:5: note: Null pointer dereference
+    new->value.av = UCL_ALLOC (sizeof (ucl_array_t));
+    ^
+src/ucl_util.c:2997:9: warning: Either the condition '(new)!=NULL' is redundant or there is possible null pointer dereference: new. [nullPointerRedundantCheck]
+    if (new->value.av) {
+        ^
+src/ucl_util.c:2999:6: note: Assuming that condition '(new)!=NULL' is not redundant
+     UCL_ARRAY_GET (vec, new);
+     ^
+src/ucl_util.c:2997:9: note: Null pointer dereference
+    if (new->value.av) {
+        ^
+src/ucl_util.c:2998:14: warning: Either the condition '(new)!=NULL' is redundant or there is possible null pointer dereference: new. [nullPointerRedundantCheck]
+     memset (new->value.av, 0, sizeof (ucl_array_t));
+             ^
+src/ucl_util.c:2999:6: note: Assuming that condition '(new)!=NULL' is not redundant
+     UCL_ARRAY_GET (vec, new);
+     ^
+src/ucl_util.c:2998:14: note: Null pointer dereference
+     memset (new->value.av, 0, sizeof (ucl_array_t));
+             ^
+src/ucl_util.c:3002:39: warning: Possible null pointer dereference: vec [nullPointer]
+     kv_resize_safe (ucl_object_t *, *vec, 8, enomem);
+                                      ^
+src/ucl_util.c:2999:6: note: Assignment 'vec=(ucl_array_t*)((new)!=NULL?(new)->value.av:NULL)', assigned value is 0
+     UCL_ARRAY_GET (vec, new);
+     ^
+src/ucl_util.c:3002:39: note: Null pointer dereference
+     kv_resize_safe (ucl_object_t *, *vec, 8, enomem);
+                                      ^
+src/ucl_util.c:3017:6: warning: Either the condition '(obj)!=NULL' is redundant or there is possible null pointer dereference: obj. [nullPointerRedundantCheck]
+ if (obj->type == UCL_ARRAY) {
+     ^
+src/ucl_util.c:3018:3: note: Assuming that condition '(obj)!=NULL' is not redundant
+  UCL_ARRAY_GET (vec, obj);
+  ^
+src/ucl_util.c:3017:6: note: Null pointer dereference
+ if (obj->type == UCL_ARRAY) {
+     ^
+src/ucl_util.c:3020:7: warning: Possible null pointer dereference: vec [nullPointer]
+  if (vec->m < reserved) {
+      ^
+src/ucl_util.c:3018:3: note: Assignment 'vec=(ucl_array_t*)((obj)!=NULL?(obj)->value.av:NULL)', assigned value is 0
+  UCL_ARRAY_GET (vec, obj);
+  ^
+src/ucl_util.c:3020:7: note: Null pointer dereference
+  if (vec->m < reserved) {
+      ^
+src/ucl_util.c:3696:7: warning: Either the condition '(o1)!=NULL' is redundant or there is possible null pointer dereference: o1. [nullPointerRedundantCheck]
+  if (o1->len == o2->len && o1->len > 0) {
+      ^
+src/ucl_util.c:3697:4: note: Assuming that condition '(o1)!=NULL' is not redundant
+   UCL_ARRAY_GET (vec1, o1);
+   ^
+src/ucl_util.c:3696:7: note: Null pointer dereference
+  if (o1->len == o2->len && o1->len > 0) {
+      ^
+src/ucl_util.c:3696:18: warning: Either the condition '(o2)!=NULL' is redundant or there is possible null pointer dereference: o2. [nullPointerRedundantCheck]
+  if (o1->len == o2->len && o1->len > 0) {
+                 ^
+src/ucl_util.c:3698:4: note: Assuming that condition '(o2)!=NULL' is not redundant
+   UCL_ARRAY_GET (vec2, o2);
+   ^
+src/ucl_util.c:3696:18: note: Null pointer dereference
+  if (o1->len == o2->len && o1->len > 0) {
+                 ^
+src/ucl_util.c:285:7: style: Variable 'tmp' is reassigned a value before the old one has been used. [redundantAssignment]
+  tmp = obj->next;
+      ^
+src/ucl_util.c:266:11: note: tmp is assigned
+      tmp = sub;
+          ^
+src/ucl_util.c:285:7: note: tmp is overwritten
+  tmp = obj->next;
+      ^
+src/ucl_util.c:2737:4: style: Consecutive return, break, continue, goto or throw statements are unnecessary. [duplicateBreak]
+   break;
+   ^
+src/ucl_util.c:260:17: style: The scope of the variable 'i' can be reduced. [variableScope]
+   unsigned int i;
+                ^
+src/ucl_util.c:500:16: style: The scope of the variable 'deconst' can be reduced. [variableScope]
+ ucl_object_t *deconst;
+               ^
+src/ucl_util.c:551:16: style: The scope of the variable 'deconst' can be reduced. [variableScope]
+ ucl_object_t *deconst;
+               ^
+src/ucl_util.c:888:6: style: The scope of the variable 'fd' can be reduced. [variableScope]
+ int fd;
+     ^
+src/ucl_util.c:1083:22: style: The scope of the variable 'ext' can be reduced. [variableScope]
+ char *old_curfile, *ext;
+                     ^
+src/ucl_util.c:1407:7: style: The scope of the variable 'need_glob' can be reduced. [variableScope]
+ bool need_glob = false;
+      ^
+src/ucl_util.c:1408:6: style: The scope of the variable 'cnt' can be reduced. [variableScope]
+ int cnt = 0;
+     ^
+src/ucl_util.c:1409:7: style: The scope of the variable 'glob_pattern' can be reduced. [variableScope]
+ char glob_pattern[PATH_MAX];
+      ^
+src/ucl_util.c:1410:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+ size_t i;
+        ^
+src/ucl_util.c:1495:26: style: The scope of the variable 'search' can be reduced. [variableScope]
+ bool allow_url = false, search = false;
+                         ^
+src/ucl_util.c:1496:14: style: The scope of the variable 'duplicate' can be reduced. [variableScope]
+ const char *duplicate;
+             ^
+src/ucl_util.c:1499:7: style: The scope of the variable 'ipath' can be reduced. [variableScope]
+ char ipath[PATH_MAX];
+      ^
+src/ucl_util.c:1696:22: style: The scope of the variable 'param' can be reduced. [variableScope]
+ const ucl_object_t *param;
+                     ^
+src/ucl_util.c:1754:22: style: The scope of the variable 'param' can be reduced. [variableScope]
+ const ucl_object_t *param;
+                     ^
+src/ucl_util.c:1759:20: style: The scope of the variable 'tmp' can be reduced. [variableScope]
+ char *load_file, *tmp;
+                   ^
+src/ucl_util.c:1763:10: style: The scope of the variable 'iv' can be reduced. [variableScope]
+ int64_t iv;
+         ^
+src/ucl_util.c:2171:10: style: The scope of the variable 'sc' can be reduced. [variableScope]
+ char c, sc;
+         ^
+src/ucl_util.c:2172:6: style: The scope of the variable 'mlen' can be reduced. [variableScope]
+ int mlen;
+     ^
+src/ucl_util.c:2193:10: style: The scope of the variable 'sc' can be reduced. [variableScope]
+ char c, sc;
+         ^
+src/ucl_util.c:2194:6: style: The scope of the variable 'mlen' can be reduced. [variableScope]
+ int mlen;
+     ^
+src/ucl_util.c:2214:28: style: The scope of the variable 'p' can be reduced. [variableScope]
+ const char *start, *end, *p, *pos;
+                           ^
+src/ucl_util.c:2215:14: style: The scope of the variable 'd' can be reduced. [variableScope]
+ char *dst, *d;
+             ^
+src/ucl_util.c:2216:9: style: The scope of the variable 'escaped_len' can be reduced. [variableScope]
+ size_t escaped_len;
+        ^
+src/ucl_util.c:2675:10: style: The scope of the variable 'ap' can be reduced. [variableScope]
+ va_list ap;
+         ^
+src/ucl_util.c:3179:11: style: The scope of the variable 'i' can be reduced. [variableScope]
+ unsigned i;
+          ^
+src/ucl_util.c:3181:17: style: The scope of the variable 'obj' can be reduced. [variableScope]
+ ucl_object_t **obj;
+                ^
+src/ucl_util.c:3266:17: style: The scope of the variable 'obj' can be reduced. [variableScope]
+ ucl_object_t **obj, *ret = NULL;
+                ^
+src/ucl_util.c:3282:17: style: The scope of the variable 'obj' can be reduced. [variableScope]
+ ucl_object_t **obj, *ret = NULL;
+                ^
+src/ucl_util.c:3578:22: style: The scope of the variable 'cur' can be reduced. [variableScope]
+ const ucl_object_t *cur;
+                     ^
+src/ucl_util.c:3900:22: style: The scope of the variable 'found' can be reduced. [variableScope]
+ const ucl_object_t *found;
+                     ^
+src/ucl_util.c:3901:16: style: The scope of the variable 'obj' can be reduced. [variableScope]
+ ucl_object_t *obj;
+               ^
+src/ucl_util.c:3011:1: style: Label 'enomem' is not used. [unusedLabel]
+enomem:
+^
+src/ucl_util.c:3029:1: style: Label 'e0' is not used. [unusedLabel]
+e0:
+^
+src/ucl_util.c:3145:1: style: Label 'e0' is not used. [unusedLabel]
+e0:
+^
+src/ucl_util.c:3172:1: style: Label 'e0' is not used. [unusedLabel]
+e0:
+^
+src/ucl_util.c:3210:1: style: Label 'e0' is not used. [unusedLabel]
+e0:
+^
+src/ucl_util.c:1770:7: style: Variable 'test' is assigned a value that is never used. [unreadVariable]
+ test = false;
+      ^
+src/ucl_util.c:1406:25: style: Variable 'p' is assigned a value that is never used. [unreadVariable]
+ const unsigned char *p = data, *end = data + len;
+                        ^
+src/ucl_util.c:1406:38: style: Variable 'end' is assigned a value that is never used. [unreadVariable]
+ const unsigned char *p = data, *end = data + len;
+                                     ^
+src/ucl_util.c:1407:17: style: Variable 'need_glob' is assigned a value that is never used. [unreadVariable]
+ bool need_glob = false;
+                ^
+src/ucl_util.c:1408:10: style: Variable 'cnt' is assigned a value that is never used. [unreadVariable]
+ int cnt = 0;
+         ^
+src/ucl_util.c:1409:7: style: Unused variable: glob_pattern [unusedVariable]
+ char glob_pattern[PATH_MAX];
+      ^
+src/ucl_util.c:1410:9: style: Unused variable: i [unusedVariable]
+ size_t i;
+        ^
+src/ucl_util.c:3215:0: style: The function 'ucl_array_delete' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3323:0: style: The function 'ucl_array_index_of' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3279:0: style: The function 'ucl_array_pop_first' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3263:0: style: The function 'ucl_array_pop_last' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3150:0: style: The function 'ucl_array_prepend' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3342:0: style: The function 'ucl_array_replace_index' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3295:0: style: The function 'ucl_array_size' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3251:0: style: The function 'ucl_array_tail' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3923:0: style: The function 'ucl_comments_add' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3885:0: style: The function 'ucl_comments_find' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3897:0: style: The function 'ucl_comments_move' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3357:0: style: The function 'ucl_elt_append' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3758:0: style: The function 'ucl_object_array_sort' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3751:0: style: The function 'ucl_object_compare_qsort' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:2491:0: style: The function 'ucl_object_delete_key' is never used. [unusedFunction]
+
+^
+src/ucl_emitter.c:631:0: style: The function 'ucl_object_emit' is never used. [unusedFunction]
+
+^
+src/ucl_emitter_utils.c:445:0: style: The function 'ucl_object_emit_fd_funcs' is never used. [unusedFunction]
+
+^
+src/ucl_emitter_utils.c:426:0: style: The function 'ucl_object_emit_file_funcs' is never used. [unusedFunction]
+
+^
+src/ucl_emitter_streamline.c:124:0: style: The function 'ucl_object_emit_streamline_add_object' is never used. [unusedFunction]
+
+^
+src/ucl_emitter_streamline.c:164:0: style: The function 'ucl_object_emit_streamline_finish' is never used. [unusedFunction]
+
+^
+src/ucl_emitter_streamline.c:63:0: style: The function 'ucl_object_emit_streamline_new' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:296:0: style: The function 'ucl_object_free' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3107:0: style: The function 'ucl_object_frombool' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3093:0: style: The function 'ucl_object_fromdouble' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3073:0: style: The function 'ucl_object_fromlstring' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:2529:0: style: The function 'ucl_object_insert_key_merged' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:2798:0: style: The function 'ucl_object_iter_chk_excpn' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:2808:0: style: The function 'ucl_object_iterate_reset' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3537:0: style: The function 'ucl_object_keyl' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:2672:0: style: The function 'ucl_object_lookup_any' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:2910:0: style: The function 'ucl_object_lookup_path' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:2516:0: style: The function 'ucl_object_pop_key' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:2536:0: style: The function 'ucl_object_replace_key' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3015:0: style: The function 'ucl_object_reserve' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3771:0: style: The function 'ucl_object_sort_keys' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3522:0: style: The function 'ucl_object_tolstring' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3491:0: style: The function 'ucl_object_tostring_forced' is never used. [unusedFunction]
+
+^
+src/ucl_schema.c:1064:0: style: The function 'ucl_object_validate' is never used. [unusedFunction]
+
+^
+src/ucl_schema.c:1071:0: style: The function 'ucl_object_validate_root' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:2101:0: style: The function 'ucl_parser_add_fd' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:2037:0: style: The function 'ucl_parser_add_file' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:2025:0: style: The function 'ucl_parser_add_file_priority' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:750:0: style: The function 'ucl_parser_add_special_handler' is never used. [unusedFunction]
+
+^
+src/ucl_parser.c:3053:0: style: The function 'ucl_parser_add_string' is never used. [unusedFunction]
+
+^
+src/ucl_parser.c:3086:0: style: The function 'ucl_parser_chunk_peek' is never used. [unusedFunction]
+
+^
+src/ucl_parser.c:3096:0: style: The function 'ucl_parser_chunk_skip' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:707:0: style: The function 'ucl_parser_clear_error' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:687:0: style: The function 'ucl_parser_get_column' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3875:0: style: The function 'ucl_parser_get_comments' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3942:0: style: The function 'ucl_parser_get_cur_file' is never used. [unusedFunction]
+
+^
+src/ucl_parser.c:3110:0: style: The function 'ucl_parser_get_current_stack_object' is never used. [unusedFunction]
+
+^
+src/ucl_parser.c:2729:0: style: The function 'ucl_parser_get_default_priority' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:677:0: style: The function 'ucl_parser_get_error_code' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:697:0: style: The function 'ucl_parser_get_linenum' is never used. [unusedFunction]
+
+^
+src/ucl_parser.c:3002:0: style: The function 'ucl_parser_insert_chunk' is never used. [unusedFunction]
+
+^
+src/ucl_parser.c:2717:0: style: The function 'ucl_parser_set_default_priority' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:3933:0: style: The function 'ucl_parser_set_include_tracer' is never used. [unusedFunction]
+
+^
+src/ucl_parser.c:2848:0: style: The function 'ucl_parser_set_variables_handler' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:717:0: style: The function 'ucl_pubkey_add' is never used. [unusedFunction]
+
+^
+src/ucl_util.c:2191:0: style: The function 'ucl_strncasestr' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+

@@ -1,0 +1,146 @@
+expat/lib/xmlparse.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 44 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+expat/lib/xmlparse.c:667:0: information: Skipping configuration 'GRND_NONBLOCK;HAVE_GETRANDOM;HAVE_SYSCALL_GETRANDOM' since the value of 'GRND_NONBLOCK' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  const unsigned int getrandomFlags = GRND_NONBLOCK;
+^
+expat/lib/xmlparse.c:3591:12: style: Variable '*eventPP' is reassigned a value before the old one has been used. [redundantAssignment]
+  *eventPP = s;
+           ^
+expat/lib/xmlparse.c:3585:14: note: *eventPP is assigned
+    *eventPP = s;
+             ^
+expat/lib/xmlparse.c:3591:12: note: *eventPP is overwritten
+  *eventPP = s;
+           ^
+expat/lib/siphash.h:214:12: style: The scope of the variable 'm' can be reduced. [variableScope]
+  uint64_t m;
+           ^
+expat/lib/xmlparse.c:898:32: style: The scope of the variable 'mtemp' can be reduced. [variableScope]
+    XML_Memory_Handling_Suite *mtemp;
+                               ^
+expat/lib/xmlparse.c:907:32: style: The scope of the variable 'mtemp' can be reduced. [variableScope]
+    XML_Memory_Handling_Suite *mtemp;
+                               ^
+expat/lib/xmlparse.c:2844:27: style: The scope of the variable 'prefix' can be reduced. [variableScope]
+          const XML_Char *prefix;
+                          ^
+expat/lib/xmlparse.c:2845:21: style: The scope of the variable 'uri' can be reduced. [variableScope]
+          XML_Char *uri;
+                    ^
+expat/lib/xmlparse.c:3738:12: style: Variable '*eventPP' is reassigned a value before the old one has been used. [redundantAssignment]
+  *eventPP = s;
+           ^
+expat/lib/xmlparse.c:3720:14: note: *eventPP is assigned
+    *eventPP = s;
+             ^
+expat/lib/xmlparse.c:3738:12: note: *eventPP is overwritten
+  *eventPP = s;
+           ^
+expat/lib/xmlparse.c:3967:7: style: The scope of the variable 'tok' can be reduced. [variableScope]
+  int tok;
+      ^
+expat/lib/xmlparse.c:4079:7: style: The scope of the variable 'tok' can be reduced. [variableScope]
+  int tok;
+      ^
+expat/lib/xmlrole.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 16 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+expat/lib/xmltok.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 21 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+expat/lib/xmltok_ns.c:48:11: style: Condition '*(const char*)&n' is always true [knownConditionTrueFalse]
+  return (*(const char *)&n ? &ns(internal_little2_encoding).enc
+          ^
+expat/lib/xmltok_ns.c:48:26: note: Address of variable taken here.
+  return (*(const char *)&n ? &ns(internal_little2_encoding).enc
+                         ^
+expat/lib/xmltok_ns.c:48:11: note: Condition '*(const char*)&n' is always true
+  return (*(const char *)&n ? &ns(internal_little2_encoding).enc
+          ^
+expat/tests/benchmark/benchmark.c:60:30: style: The scope of the variable 'XMLBufPtr' can be reduced. [variableScope]
+  char *XMLBuf, *XMLBufEnd, *XMLBufPtr;
+                             ^
+expat/tests/benchmark/benchmark.c:63:43: style: The scope of the variable 'isFinal' can be reduced. [variableScope]
+  int nrOfLoops, bufferSize, fileSize, i, isFinal;
+                                          ^
+expat/tests/benchmark/benchmark.c:65:11: style: The scope of the variable 'tstart' can be reduced. [variableScope]
+  clock_t tstart, tend;
+          ^
+expat/tests/benchmark/benchmark.c:65:19: style: The scope of the variable 'tend' can be reduced. [variableScope]
+  clock_t tstart, tend;
+                  ^
+expat/tests/chardata.c:81:8: style: The scope of the variable 'buffer' can be reduced. [variableScope]
+  char buffer[1024];
+       ^
+expat/tests/runtests.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 14 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+expat/tests/runtests.c:2860:13: style: The scope of the variable 'attr' can be reduced. [variableScope]
+  AttrInfo *attr;
+            ^
+expat/tests/runtests.c:3996:15: style: The scope of the variable 'text1' can be reduced. [variableScope]
+  const char *text1 = "<!ELEMENT doc EMPTY>\n"
+              ^
+expat/tests/runtests.c:4243:15: style: The scope of the variable 'text1' can be reduced. [variableScope]
+  const char *text1 = "<!ELEMENT doc EMPTY>\n"
+              ^
+expat/tests/runtests.c:4333:15: style: The scope of the variable 'text1' can be reduced. [variableScope]
+  const char *text1 = "<!ELEMENT doc EMPTY>\n"
+              ^
+expat/tests/runtests.c:4381:15: style: The scope of the variable 'text1' can be reduced. [variableScope]
+  const char *text1 = "<!ELEMENT doc EMPTY>\n"
+              ^
+expat/tests/runtests.c:4385:15: style: The scope of the variable 'text2' can be reduced. [variableScope]
+  const char *text2 = "<?xml version='1.0' encoding='utf-8'?>";
+              ^
+expat/tests/runtests.c:7916:7: style: The scope of the variable 'i' can be reduced. [variableScope]
+  int i;
+      ^
+expat/tests/runtests.c:8257:9: style: The scope of the variable 'buffer' can be reduced. [variableScope]
+  void *buffer;
+        ^
+expat/tests/runtestspp.cpp:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 14 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+expat/tests/structdata.c:108:7: style: The scope of the variable 'i' can be reduced. [variableScope]
+  int i;
+      ^
+expat/xmlwf/readfilemap.c:89:0: information: Skipping configuration '_O_BINARY' since the value of '_O_BINARY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+  fd = topen(name, O_RDONLY | O_BINARY);
+^
+expat/xmlwf/xmlfile.c:183:0: information: Skipping configuration '_O_BINARY' since the value of '_O_BINARY' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    fd = topen(filename, O_BINARY | O_RDONLY);
+^
+expat/xmlwf/xmlwf.c:904:7: style: The scope of the variable 'requiresNotations' can be reduced. [variableScope]
+  int requiresNotations = 0;
+      ^
+expat/fuzz/xml_parse_fuzzer.c:46:0: style: The function 'LLVMFuzzerTestOneInput' is never used. [unusedFunction]
+
+^
+expat/lib/xmltok.c:1293:0: style: The function 'XmlUtf16Encode' is never used. [unusedFunction]
+
+^
+expat/lib/xmltok_impl.c:1247:0: style: The function 'attributeValueTok' is never used. [unusedFunction]
+
+^
+expat/lib/xmltok_impl.c:345:0: style: The function 'cdataSectionTok' is never used. [unusedFunction]
+
+^
+expat/lib/xmltok_impl.c:813:0: style: The function 'contentTok' is never used. [unusedFunction]
+
+^
+expat/lib/xmltok_impl.c:1316:0: style: The function 'entityValueTok' is never used. [unusedFunction]
+
+^
+expat/lib/xmltok_impl.c:1383:0: style: The function 'ignoreSectionTok' is never used. [unusedFunction]
+
+^
+expat/lib/xmltok_impl.c:1007:0: style: The function 'prologTok' is never used. [unusedFunction]
+
+^
+expat/lib/xmlparse.c:762:0: style: The function 'writeRandomBytes_rand_s' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
